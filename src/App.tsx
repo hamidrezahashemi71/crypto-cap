@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import MarketUpdete from "./components/MarketUpdete";
 import Navbar from "./components/Navbar";
@@ -9,7 +10,8 @@ function App() {
       <Navbar />
       <Hero />
       <Trends />
-      <MarketUpdete/>
+      <MarketUpdete />
+      <Footer/>
     </div>
   );
 }

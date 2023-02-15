@@ -16,7 +16,7 @@ const CryptoList = () => {
           return (
             <div key={crypto.id} className='grid grid-cols-6 text-center items-center py-[9.19px] text-[#B6B6B6] font-roboto  border-[1px] border-white border-opacity-5'>
               <p>{ crypto.id }</p>
-              <div className='flex justify-center items-center gap-[22px] font-roboto font-normal text-[#B6B6B6]'>
+              <div className='flex justify-start items-center gap-[22px] font-roboto font-normal text-[#B6B6B6]'>
                 <img src={crypto.icon} alt="" />
                 <p>{ crypto.name}</p>
                 <p>|</p>

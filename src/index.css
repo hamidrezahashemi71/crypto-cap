@@ -5,5 +5,11 @@
   .btn-primary {
     @apply w-[104px] h-[50px] flex justify-center items-center bg-[#0FAE96] text-white text-[16px] font-raleway font-semibold rounded-[10px] hover:bg-green-800 transition-all duration-200
   }
+  .footer-item {
+    @apply font-roboto text-[#B6B6B6] cursor-pointer hover:text-white transition-all duration-200
+  }
+  .footer-title {
+    @apply font-raleway font-semibold text-[#ECF1F0] text-lg
+  }
 }
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;700&family=Roboto:wght@300;400;500&display=swap');
