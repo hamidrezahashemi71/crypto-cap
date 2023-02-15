@@ -4,7 +4,6 @@ import MarketUpdete from "./components/MarketUpdete";
 import Navbar from "./components/Navbar";
 import Trends from "./components/Trends";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { useEffect, useRef } from 'react'
 import { useWindowSize } from "./lib";
 
 const queryClient = new QueryClient()
@@ -22,6 +21,7 @@ function App() {
               <Hero />
               <Trends />
               <MarketUpdete />
+              <Footer/>
             </div>
             :
             <p className="text-center pt-4">Sorry, For seeing the app you need to use larger devices!</p>

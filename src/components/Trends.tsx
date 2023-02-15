@@ -1,9 +1,10 @@
 import TrendCard from './TrendCard'
 import { useState } from 'react'
 import { cryptosList } from '../lib/dummyData'
+import { CryptoObject } from '../lib/interfaces'
 
 const Trends = () => {
-  const [cryptos, setCryptos] = useState(cryptosList)
+  const [cryptos, setCryptos] = useState<CryptoObject[]>(cryptosList)
 
   return (
     <div className='relative w-full flex flex-col gap-6 min-h-[243px] mb-[97px]'>
@@ -20,7 +21,6 @@ const Trends = () => {
                 price={crypto.price}
                 diff={crypto.diff}
                 chart={crypto.chart}
-                setCryptos={setCryptos}
               />
           )
         })}

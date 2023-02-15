@@ -1,22 +1,21 @@
 import { cryptosList } from '../lib/dummyData'
 import { getRequest } from '../lib/axios/baseConfig'
 import { useQuery } from '@tanstack/react-query'
+import { Coins, CryptoObject } from '../lib/interfaces'
+import LoadingSpinner from './LoadingSpinner'
 
-const CryptoList = ({intervalTime}:any) => {
+const CryptoList = ({intervalTime} : {intervalTime : number}) => {
   const getCoinPrices = async () => await getRequest('')
-  const { data: coins, isLoading } = useQuery<any | undefined>({
+  const { data: coins, isLoading } = useQuery<Coins>({
     queryKey: ["prices"],
     queryFn: getCoinPrices,
     refetchInterval: intervalTime,
   });
 
-  console.log("COINS", coins)
 
-  // const coinArr = Object.entries(conPrices.data)
-
-  if(isLoading) return <div>Loading ...</div>
+  if(isLoading) return <LoadingSpinner/>
   return (
-      <div className="mt-[31px] w-full custom-transparent-bg border-[1px] border-white border-opacity-5">
+      <div className="mt-[31px] w-full custom-transparent-bg border-[1px] border-white border-opacity-5 z-50">
           <div className='grid grid-cols-12 w-full text-center py-[21.69px] text-[#B6B6B6] font-roboto  border-[1px] border-white border-opacity-5'>
             <p className='col-span-1'>NO</p>
             <p className='col-span-3'>NAME</p>
@@ -26,7 +25,7 @@ const CryptoList = ({intervalTime}:any) => {
             <p className='col-span-2'>TRADE</p>
           </div>
       <div>
-        {cryptosList.map((crypto) => {
+        {cryptosList.map((crypto : CryptoObject) => {
           return (
             <div key={crypto.id} className='grid grid-cols-12 text-center items-center py-[9.19px] text-[#B6B6B6] font-roboto  border-[1px] border-white border-opacity-5'>
               <p className='col-span-1'>{ crypto.id }</p>
@@ -37,8 +36,8 @@ const CryptoList = ({intervalTime}:any) => {
                 <p>{ crypto.abrv}</p>
               </div>
               {
-                coins[crypto.findInApiKey]?.usd ?
-                  <p className='col-span-2'>${coins[crypto.findInApiKey]?.usd}</p>
+                coins![crypto.findInApiKey]?.usd ?
+                  <p className='col-span-2'>${coins![crypto.findInApiKey]?.usd}</p>
                   :
                   <p className='col-span-2 text-[#AE0000]'>unavailable</p>
               }

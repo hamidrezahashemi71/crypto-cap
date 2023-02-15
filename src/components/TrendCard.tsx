@@ -1,5 +1,7 @@
-const TrendCard = (props: any) => {
-  const {icon, abrv, name, price, diff, chart, setCryptos} = props
+import { TrendCardProps } from "../lib/interfaces"
+
+const TrendCard = (props: TrendCardProps) => {
+  const {icon, abrv, name, price, diff, chart} = props
   return (
     <div className='custom-transparent-bg w-full rounded-2xl px-7 py-[18px]'>
       <div className='flex flex-col gap-[35px]'>
@@ -7,7 +9,7 @@ const TrendCard = (props: any) => {
           <div className='flex justify-between items-center gap-[14px]'>
             <img src={icon} alt="Rodi" />
             <p className='font-raleway font-semibold text-[white] text-sm'>{abrv}</p>
-            <span className='w-full bg-[#C6C6C6] py-1 px-[6px] text-sm cursor-pointer hover:bg-gray-600 rounded-[4px] hover:text-white transition-all duration-200s'>
+            <span className='w-full text-[#1D1429] bg-[#C6C6C6] py-1 px-[6px] text-sm cursor-pointer hover:bg-gray-600 rounded-[4px] hover:text-white transition-all duration-200s'>
               {name.toUpperCase()}
             </span>
           </div>
@@ -27,6 +29,6 @@ const TrendCard = (props: any) => {
       </div>
     </div>
   )
-}
+} 
 
 export default TrendCard

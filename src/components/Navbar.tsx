@@ -1,14 +1,17 @@
 
 const Navbar = () => {
+  const navItems = ['Home', 'Business', 'Trade', 'Target', 'Learn']
   return (
     <div className='w-full flex flex-wrap justify-between items-center gap-10 text-white'>
       <p className='font-raleway text-2xl'>Crypto<span className='text-[#0FAE96] font-bold cursor-pointer'>Cap</span> </p>
       <div className='w-[448px] flex py-12 flex-wrap justify-between px-[10px] items-center gap-10 font-raleway'>
-        <p className='font-semibold cursor-pointer text-[rgb(15,174,150)] hover:text-green-300 transition-all duration-200'>Home</p>
-        <p className='font-thins cursor-pointer hover:text-[#0FAE96] transition-all duration-200'>Business</p>
-        <p className='font-thins cursor-pointer hover:text-[#0FAE96] transition-all duration-200'>Trade</p>
-        <p className='font-thins cursor-pointer hover:text-[#0FAE96] transition-all duration-200'>Target</p>
-        <p className='font-thins cursor-pointer hover:text-[#0FAE96] transition-all duration-200'>Learn</p>
+        {navItems.map((item: string, index: number) => {
+          return (
+            <p key={`navItem${index}`} className={`${item === 'Home' ? 'font-semibold text-[rgb(15,174,150)] hover:text-green-300' : 'font-thin hover:text-[#0FAE96]'} cursor-pointer   transition-all duration-200`}>
+              {item}
+            </p>
+          )
+        })}
       </div>
       <div className="w-[205px] justify-between items-center hidden xl:flex ">
         <div className="flex items-center x">

@@ -1,15 +1,16 @@
 import { useState } from "react"
 import { filterList } from "../lib/dummyData"
+import { FilterListItem } from "../lib/interfaces"
 
 const MarketUpdateHeader = () => {
-  const [filterData, setFilterData] = useState(filterList)
+  const [filterData, setFilterData] = useState<FilterListItem[]>(filterList)
   return (
     <div className='flex flex-col gap-[22px] text-white'>
       <p className="font-raleway font-bold text-4xl">Market Update</p>
       <p className="font-roboto text-[#B6B6B6] text-lg">Cryptocurrency Categories</p>
       <div className='flex justify-between items-center'>
         <div className='flex items-center justify-between gap-3 w-max'>
-          {filterData.map((filterItem) => {
+          {filterData.map((filterItem: FilterListItem) => {
             return (
               <div
                 className={`flex items-center justify-center w-max p-[10px] rounded-md cursor-pointer font-roboto transition-all duration-200
