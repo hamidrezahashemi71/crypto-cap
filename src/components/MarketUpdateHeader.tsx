@@ -4,15 +4,18 @@ import { filterList } from "../lib/dummyData"
 const MarketUpdateHeader = () => {
   const [filterData, setFilterData] = useState(filterList)
   return (
-    <div className='flex flex-col gap-[22px]  text-white'>
+    <div className='flex flex-col gap-[22px] text-white'>
       <p className="font-raleway font-bold text-4xl">Market Update</p>
       <p className="font-roboto text-[#B6B6B6] text-lg">Cryptocurrency Categories</p>
       <div className='flex justify-between items-center'>
         <div className='flex items-center justify-between gap-3 w-[70%]'>
           {filterData.map((filterItem) => {
             return (
-              <div className={`flex items-center justify-center w-full px-3 py-[10px] rounded-md cursor-pointer font-roboto transition-all duration-200
-               ${filterItem.selected ? 'bg-white text-black' : 'bg-gray-900 hover:bg-white hover:text-black'}`}>
+              <div
+                className={`flex items-center justify-center w-full px-3 py-[10px] rounded-md cursor-pointer font-roboto transition-all duration-200
+               ${filterItem.selected ? 'bg-white text-black' : 'bg-gray-900 hover:bg-white hover:text-black'}`}
+              key={filterItem.id}
+              >
                 {filterItem.name}
               </div>
             )
