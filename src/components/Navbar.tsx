@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className='w-[100vw] md:h-[90px] h-fit flex flex-wrap justify-between items-center gap-10 bg-black text-white px-[92px]'>
+    <div className='w-[100vw] flex flex-wrap justify-between items-center gap-10 bg-black text-white px-[92px]'>
       <p className='font-raleway text-2xl'>Crypto<span className='text-[#0FAE96] font-bold cursor-pointer'>Cap</span> </p>
-      <div className='w-[448px] h-[39px] flex flex-wrap justify-between px-[10px] items-center gap-10 font-raleway'>
+      <div className='w-[448px] py-12 flex flex-wrap justify-between px-[10px] items-center gap-10 font-raleway'>
         <p className='font-semibold cursor-pointer text-[rgb(15,174,150)] hover:text-green-300 transition-all duration-200'>Home</p>
         <p className='font-thins cursor-pointer hover:text-[#0FAE96] transition-all duration-200'>Business</p>
         <p className='font-thins cursor-pointer hover:text-[#0FAE96] transition-all duration-200'>Trade</p>
@@ -26,7 +26,7 @@ const Navbar = () => {
           </p>
           
         </div>
-        <button className="w-[104px] h-[50px] flex justify-center items-center bg-[#0FAE96] rounded-[10px] hover:bg-green-800 transition-all duration-200">Login</button>
+        <button className="btn-primary">Login</button>
       </div>
     </div>
   )
