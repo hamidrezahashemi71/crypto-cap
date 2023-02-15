@@ -1,0 +1,77 @@
+const cryptosList = [
+  {
+    id: '1',
+    icon: 'images/bitcoin.png',
+    abrv: 'BTC',
+    name: 'bitcoin',
+    price: 56624.54,
+    diff: 1.41,
+    chart: 'images/btc-chart.png',
+  },
+  {
+    id: '2',
+    icon: 'images/etherium.png',
+    abrv: 'ETH',
+    name: 'etherium',
+    price: 4267.90,
+    diff: 2.22,
+    chart: 'images/eth-chart.png',
+  },
+  {
+    id: '3',
+    icon: 'images/bnb.png',
+    abrv: 'BNB',
+    name: 'binance',
+    price: 587.74,
+    diff: 0.82,
+    chart: 'images/bnb-chart.png',
+  },
+  {
+    id: '4',
+    icon: 'images/tether.png',
+    abrv: 'USDT',
+    name: 'tether',
+    price: 0.9998,
+    diff: 1.41,
+    chart: 'images/tether-chart.png',
+  },
+  {
+    id: '5',
+    icon: 'images/solana.png',
+    abrv: 'SOL',
+    name: 'solana',
+    price: -0.53,
+    diff: 1.41,
+    chart: 'images/sol-chart.png',
+  },
+  {
+    id: '6',
+    icon: 'images/ripple.png',
+    abrv: 'XRP',
+    name: 'XRP',
+    price: 0.9998,
+    diff: -0.44,
+    chart: 'images/xrp-chart.png',
+  },
+  {
+    id: '7',
+    icon: 'images/usd.png',
+    abrv: 'USDC',
+    name: 'USD Coin',
+    price: 1,
+    diff: -0.03,
+    chart: 'images/usd-chart.png',
+  },
+]
+
+const filterList = [
+  {name: 'Popular', selected: true},
+  {name: 'Metaverse', selected: false},
+  {name: 'Entertainment', selected: false},
+  {name: 'Energy', selected: false},
+  {name: 'Gaming', selected: false},
+  {name: 'Music', selected: false},
+  {name: 'See All 12+', selected: false},
+]
+
+export {cryptosList, filterList}

@@ -1,8 +1,12 @@
-import React from 'react'
+import MarketUpdateHeader from './MarketUpdateHeader'
+import CryptoList from './CryptoList'
 
 const MarketUpdete = () => {
   return (
-    <div>MarketUpdete</div>
+    <div className='w-full bg-black px-[90px]'>
+      <MarketUpdateHeader />
+      <CryptoList/>
+    </div>
   )
 }
 

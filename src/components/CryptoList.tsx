@@ -1,8 +1,6 @@
-import React from 'react'
-
 const CryptoList = () => {
   return (
-    <div>CryptoList</div>
+    <div className="mt-[31px] w-full bg-white">CryptoList</div>
   )
 }
 
