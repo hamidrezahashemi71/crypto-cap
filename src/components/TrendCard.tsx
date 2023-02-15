@@ -1,7 +1,7 @@
 const TrendCard = (props: any) => {
   const {icon, abrv, name, price, diff, chart, setCryptos} = props
   return (
-    <div className='w-[297px] bg-gray-900 rounded-2xl px-7 py-[18px]'>
+    <div className='custom-transparent-bg w-full rounded-2xl px-7 py-[18px]'>
       <div className='flex flex-col gap-[35px]'>
         <div className='flex justify-between items-center'>
           <div className='flex justify-between items-center gap-[14px]'>

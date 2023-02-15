@@ -1,6 +1,8 @@
 const Footer = () => {
   return (
-    <div className='px-[90px] py-[48.5px] w-full bg-black text-white grid grid-cols-12 border-t-[1px] border-white border-opacity-5'>
+    <div className='relative w-full text-white border-t-[1px] border-white border-opacity-5 min-h-[297px] z-20'>
+      <div className="absolute right-0 w-[1029px] h-[628px] bg-[#60FFE7] blur-[200px] -translate-y-[391px] translate-x-[90px]" />
+      <div className="absolute top-12 grid grid-cols-12 w-full h-[calc(100%-48px)]">
       <div className='flex flex-col col-span-6'>
         <p className='font-raleway text-2xl'>Crypto<span className='text-[#0FAE96] font-bold cursor-pointer'>Cap</span> </p>
         <div className="flex justify-start items-center gap-4 mt-[71px] mb-[34px]">
@@ -31,6 +33,7 @@ const Footer = () => {
         <p className="footer-item">Crypto Basic</p>
         <p className="footer-item">Tips and Tutorials</p>
         <p className="footer-item">Market Update</p>
+      </div>
       </div>
     </div>
   )

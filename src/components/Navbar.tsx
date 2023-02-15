@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className='w-full flex flex-wrap justify-between items-center gap-10 bg-black text-white px-[92px]'>
+    <div className='w-full flex flex-wrap justify-between items-center gap-10 text-white'>
       <p className='font-raleway text-2xl'>Crypto<span className='text-[#0FAE96] font-bold cursor-pointer'>Cap</span> </p>
-      <div className='w-[448px] py-12 flex flex-wrap justify-between px-[10px] items-center gap-10 font-raleway'>
+      <div className='w-[448px] flex py-12 flex-wrap justify-between px-[10px] items-center gap-10 font-raleway'>
         <p className='font-semibold cursor-pointer text-[rgb(15,174,150)] hover:text-green-300 transition-all duration-200'>Home</p>
         <p className='font-thins cursor-pointer hover:text-[#0FAE96] transition-all duration-200'>Business</p>
         <p className='font-thins cursor-pointer hover:text-[#0FAE96] transition-all duration-200'>Trade</p>

@@ -1,33 +1,52 @@
 import { cryptosList } from '../lib/dummyData'
+import { getRequest } from '../lib/axios/baseConfig'
+import { useQuery } from '@tanstack/react-query'
 
-const CryptoList = () => {
+const CryptoList = ({intervalTime}:any) => {
+  const getCoinPrices = async () => await getRequest('')
+  const { data: coins, isLoading } = useQuery<any | undefined>({
+    queryKey: ["prices"],
+    queryFn: getCoinPrices,
+    refetchInterval: intervalTime,
+  });
+
+  console.log("COINS", coins)
+
+  // const coinArr = Object.entries(conPrices.data)
+
+  if(isLoading) return <div>Loading ...</div>
   return (
-      <div className="mt-[31px] w-full bg-gray-900 border-[1px] border-white border-opacity-5">
-          <div className='grid grid-cols-6 w-full text-center py-[21.69px] text-[#B6B6B6] font-roboto  border-[1px] border-white border-opacity-5'>
-            <p className=''>NO</p>
-            <p>NAME</p>
-            <p>LAST PRICE</p>
-            <p>CHANGE</p>
-            <p>MARKET STATS</p>
-            <p>TRADE</p>
+      <div className="mt-[31px] w-full custom-transparent-bg border-[1px] border-white border-opacity-5">
+          <div className='grid grid-cols-12 w-full text-center py-[21.69px] text-[#B6B6B6] font-roboto  border-[1px] border-white border-opacity-5'>
+            <p className='col-span-1'>NO</p>
+            <p className='col-span-3'>NAME</p>
+            <p className='col-span-2'>LAST PRICE</p>
+            <p className='col-span-1'>CHANGE</p>
+            <p className='col-span-3'>MARKET STATS</p>
+            <p className='col-span-2'>TRADE</p>
           </div>
       <div>
         {cryptosList.map((crypto) => {
           return (
-            <div key={crypto.id} className='grid grid-cols-6 text-center items-center py-[9.19px] text-[#B6B6B6] font-roboto  border-[1px] border-white border-opacity-5'>
-              <p>{ crypto.id }</p>
-              <div className='flex justify-start items-center gap-[22px] font-roboto font-normal text-[#B6B6B6]'>
+            <div key={crypto.id} className='grid grid-cols-12 text-center items-center py-[9.19px] text-[#B6B6B6] font-roboto  border-[1px] border-white border-opacity-5'>
+              <p className='col-span-1'>{ crypto.id }</p>
+              <div className='flex justify-start items-center gap-[22px] font-roboto font-normal text-[#B6B6B6] col-span-3'>
                 <img src={crypto.icon} alt="" />
                 <p>{ crypto.name}</p>
                 <p>|</p>
                 <p>{ crypto.abrv}</p>
               </div>
-              <p>${crypto.price}</p>
-              <p className={`${crypto.diff < 0 ? 'text-[#AE0000]' : 'text-[#B6B6B6]'}`}>{crypto.diff}%</p>
-              <div className='flex justify-center'>
+              {
+                coins[crypto.findInApiKey]?.usd ?
+                  <p className='col-span-2'>${coins[crypto.findInApiKey]?.usd}</p>
+                  :
+                  <p className='col-span-2 text-[#AE0000]'>unavailable</p>
+              }
+              <p className={`${crypto.diff < 0 ? 'text-[#AE0000]' : 'text-[#B6B6B6]'} col-span-1`}>{crypto.diff}%</p>
+              <div className='flex justify-center col-span-3'>
                 <img src={crypto.chart} alt="" />
               </div>
-              <div className='flex justify-center'>
+              <div className='flex justify-center col-span-2'>
                 <button className='btn-primary h-[32px]'>Trade</button>
               </div>
             </div>

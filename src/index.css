@@ -11,5 +11,8 @@
   .footer-title {
     @apply font-raleway font-semibold text-[#ECF1F0] text-lg
   }
+  .custom-transparent-bg {
+    @apply  border-[1px] border-white border-opacity-5 bg-white bg-opacity-[0.02]
+  }
 }
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;700&family=Roboto:wght@300;400;500&display=swap');
