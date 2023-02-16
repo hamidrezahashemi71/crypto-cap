@@ -16,7 +16,7 @@ const Footer = () => {
 
   return (
     <div className='relative w-full text-white border-t-[1px] border-white border-opacity-5 min-h-[297px] z-20'>
-      <div className="absolute right-0 w-[1029px] h-[628px] bg-[#60FFE7] opacity-10 blur-[200px] -translate-y-[391px] translate-x-[90px] -z-10" />
+      <div className="absolute right-0 w-[1029px] h-[628px] bg-[#60FFE7] opacity-10 blur-[200px] -translate-y-[391px] translate-x-[-90px] -z-10" />
       <div className="absolute top-12 grid grid-cols-12 w-full h-[calc(100%-48px)]">
       <div className='flex flex-col col-span-6'>
         <p className='font-raleway text-2xl'>Crypto<span className='text-customGreen font-bold cursor-pointer'>Cap</span> </p>

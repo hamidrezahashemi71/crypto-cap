@@ -20,9 +20,6 @@ module.exports = {
         'raleway': ['Raleway', 'sans-serif'],
         'roboto': ['Roboto', 'sans-serif'],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
-      }
     },
   },
   plugins: [],
