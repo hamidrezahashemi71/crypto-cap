@@ -3,10 +3,10 @@
 @tailwind utilities;
 @layer components {
   .btn-primary {
-    @apply w-[104px] h-[50px] flex justify-center items-center bg-[#0FAE96] text-white text-[16px] font-raleway font-semibold rounded-[10px] hover:bg-green-800 transition-all duration-200
+    @apply w-[104px] h-[50px] flex justify-center items-center bg-customGreen text-white text-[16px] font-raleway font-semibold rounded-[10px] hover:bg-green-800 transition-all duration-200
   }
   .footer-item {
-    @apply font-roboto text-[#B6B6B6] cursor-pointer hover:text-white transition-all duration-200
+    @apply font-roboto text-grayText cursor-pointer hover:text-white transition-all duration-200
   }
   .footer-title {
     @apply font-raleway font-semibold text-[#ECF1F0] text-lg

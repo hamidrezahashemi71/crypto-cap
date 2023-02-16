@@ -22,7 +22,7 @@ const TrendCard = (props: TrendCardProps) => {
         <div className='flex justify-between'>
           <div className='flex flex-col'>
             <p className='font-roboto font-medium text-2xl text-white'>${price}</p>
-            <p className='font-roboto font-medium text-lg text-[#B6B6B6]'>{diff}%</p>
+            <p className='font-roboto font-medium text-lg text-grayText'>{diff}%</p>
           </div>
           <img src={chart} alt="chart" />
         </div>

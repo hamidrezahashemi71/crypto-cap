@@ -7,7 +7,7 @@ const MarketUpdateHeader = () => {
   return (
     <div className='flex flex-col gap-[22px] text-white'>
       <p className="font-raleway font-bold text-4xl">Market Update</p>
-      <p className="font-roboto text-[#B6B6B6] text-lg">Cryptocurrency Categories</p>
+      <p className="font-roboto text-grayText text-lg">Cryptocurrency Categories</p>
       <div className='flex justify-between items-center'>
         <div className='flex items-center justify-between gap-3 w-max'>
           {filterData.map((filterItem: FilterListItem) => {

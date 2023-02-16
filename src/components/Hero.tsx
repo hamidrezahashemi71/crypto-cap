@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Hero = () => {
   return (
     <div className='relative w-full pt-[88px] pb-[166px] flex flex-col justify-center items-center min-h-[470px]'>
@@ -10,7 +8,7 @@ const Hero = () => {
       <div className='absolute top-[100px] min-h-[246px] z-20'>
         <div className='flex flex-col items-center font-raleway font-bold text-4xl gap-7'>
           <p className='text-white text-center'>Start and Build Your Crypto Portfolio Here</p>
-          <p className='text-[#B6B6B6] px-[20%] font-roboto font-light text-lg text-center'>
+          <p className='text-grayText px-[20%] font-roboto font-light text-lg text-center'>
           Only at CryptoCap, you can build a good portfolio and learn best practices about cryptocurrency.
           </p>
           <button className='btn-primary w-[190px] mt-[22px]'>Get Started</button>

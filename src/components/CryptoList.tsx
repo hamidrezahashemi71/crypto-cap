@@ -10,13 +10,13 @@ const CryptoList = ({intervalTime} : {intervalTime : number}) => {
     queryKey: ["prices"],
     queryFn: getCoinPrices,
     refetchInterval: intervalTime,
-  });
+  }); 
 
 
   if(isLoading) return <LoadingSpinner/>
   return (
       <div className="mt-[31px] w-full custom-transparent-bg border-[1px] border-white border-opacity-5 z-50">
-          <div className='grid grid-cols-12 w-full text-center py-[21.69px] text-[#B6B6B6] font-roboto  border-[1px] border-white border-opacity-5'>
+          <div className='grid grid-cols-12 w-full text-center py-[21.69px] text-grayText font-roboto  border-[1px] border-white border-opacity-5'>
             <p className='col-span-1'>NO</p>
             <p className='col-span-3'>NAME</p>
             <p className='col-span-2'>LAST PRICE</p>
@@ -27,9 +27,9 @@ const CryptoList = ({intervalTime} : {intervalTime : number}) => {
       <div>
         {cryptosList.map((crypto : CryptoObject) => {
           return (
-            <div key={crypto.id} className='grid grid-cols-12 text-center items-center py-[9.19px] text-[#B6B6B6] font-roboto  border-[1px] border-white border-opacity-5'>
+            <div key={crypto.id} className='grid grid-cols-12 text-center items-center py-[9.19px] text-grayText font-roboto  border-[1px] border-white border-opacity-5'>
               <p className='col-span-1'>{ crypto.id }</p>
-              <div className='flex justify-start items-center gap-[22px] font-roboto font-normal text-[#B6B6B6] col-span-3'>
+              <div className='flex justify-start items-center gap-[22px] font-roboto font-normal text-grayText col-span-3'>
                 <img src={crypto.icon} alt="" />
                 <p>{ crypto.name}</p>
                 <p>|</p>
@@ -39,9 +39,9 @@ const CryptoList = ({intervalTime} : {intervalTime : number}) => {
                 coins![crypto.findInApiKey]?.usd ?
                   <p className='col-span-2'>${coins![crypto.findInApiKey]?.usd}</p>
                   :
-                  <p className='col-span-2 text-[#AE0000]'>unavailable</p>
+                  <p className='col-span-2 text-customRed'>unavailable</p>
               }
-              <p className={`${crypto.diff < 0 ? 'text-[#AE0000]' : 'text-[#B6B6B6]'} col-span-1`}>{crypto.diff}%</p>
+              <p className={`${crypto.diff < 0 ? 'text-customRed' : 'text-grayText'} col-span-1`}>{crypto.diff}%</p>
               <div className='flex justify-center col-span-3'>
                 <img src={crypto.chart} alt="" />
               </div>
