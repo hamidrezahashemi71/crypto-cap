@@ -25,7 +25,8 @@ const CryptoList = ({intervalTime} : {intervalTime : number}) => {
             <p className='col-span-2'>TRADE</p>
           </div>
       <div>
-        {cryptosList.map((crypto : CryptoObject) => {
+        {coins ?
+          cryptosList.map((crypto: CryptoObject) => {
           return (
             <div key={crypto.id} className='grid grid-cols-12 text-center items-center py-[9.19px] text-grayText font-roboto  border-[1px] border-white border-opacity-5'>
               <p className='col-span-1'>{ crypto.id }</p>
@@ -50,7 +51,7 @@ const CryptoList = ({intervalTime} : {intervalTime : number}) => {
               </div>
             </div>
           )
-        })}
+        }) : <p className='text-grayText text-2xl text-center'>Unable to fetch data! Please try again...</p>}
       </div>
       </div>
   )
